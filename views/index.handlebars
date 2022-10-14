@@ -1,0 +1,24 @@
+<div class="bg-light p-5 rounded-lg m-3">
+  <h1 class="display-4">Bem vindo ao meu primeiro site.</h1>
+  <p class="lead">Se encontrar algum bug, me avise para estudar mais sobre.</p>
+  <hr class="my-4">
+  <p>Estou meio perdido, mas isso está funcionando.</p>
+  <a class="btn btn-primary btn-lg" href="/usuarios/registro" role="button">Crie uma conta</a>
+</div>
+<hr>
+<h2>Postagens recentes</h2>
+
+{{#each postagens}}
+<div class="card mt-4">
+    <div class="card-body">
+        <h3>{{titulo}}</h3>
+        <p>Descrição: {{descricao}}</p>
+        <a href="/postagem/{{slug}}"><button class="btn btn-success">Leia mais</button></a>
+        <hr>
+        <p>Categoria: {{categoria.nome}}</p>
+        <p>Data de publicação: {{data}}</p>
+    </div>
+</div>
+{{else}}
+    <h2>Não existe postagens ainda</h2>
+{{/each}}
